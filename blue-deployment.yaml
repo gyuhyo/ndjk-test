@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ndjk-test
-          image: my-docker-repository/ndjk-test:latest
+          image: gyuhyo/ndjk-test:0.0.1
           ports:
             - containerPort: 3000
 ---
