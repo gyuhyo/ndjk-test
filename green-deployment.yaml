@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ndjk-test-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ndjk-test
+      version: green
+  template:
+    metadata:
+      labels:
+        app: ndjk-test
+        version: green
+    spec:
+      containers:
+        - name: ndjk-test
+          image: my-docker-repository/ndjk-test:v2
+          ports:
+            - containerPort: 3000
